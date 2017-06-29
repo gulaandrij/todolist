@@ -10,16 +10,18 @@
     <link href="/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<h1>my todo</h1>
 <div id="todo-table">
     <form>
-        <input type="text" name="item" required>
+        <input type="text" name="item" required title="item"/>
         <button type="submit">add item</button>
     </form>
     <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
+        <% for(var i=0;i < todo.length;i++){ %>
+        <li><%= todo[i].item%></li>
+        <% } %>
     </ul>
 </div>
+<script src="/todo-list.js"></script>
 </body>
 </html>
